@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="phone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="additionalFeatures" Type="varchar(max)" />
+    <Property Name="description" Type="varchar(max)" />
+    <Property Name="name" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="phone" EntityType="Self.phone" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
